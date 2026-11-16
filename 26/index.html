@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lapu putenis</title>
+<style>
+/* Pamata izkārtojums — šīs rindas nemaini */
+body { font-family: Arial, sans-serif; max-width: 680px; margin: 24px auto; padding: 16px; line-height: 1.6; }
+button, input { font: inherit; padding: 10px 16px; margin: 6px 0; cursor: pointer; }
+img, audio { max-width: 100%; }
+[hidden] { display: none !important; }
+
+/* NOFORMĒ ŠEIT: pielieto 2.1. un 2.2. nodarbībā apgūto CSS */
+body {
+  background-color: #84a6c7;;
+  color: #432f4d;
+}
+
+h1 {
+  color: #432f4d;
+  font-size36px;
+  text-align: center;
+}
+
+.noteikumi {
+  background-color: #91b5da;
+  color: #432f4d;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.laukums {
+  width: 360px;
+  padding: 20px;
+  border: 2px dashed #a8b9d1;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 100%;
+  text-align: center;
+  background-color: #91b5da;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #3c6186;
+  color: #cfb6e6;
+  border: 8px;
+}
+</style>
+</head>
+<body>
+<h1>Lapu putenis</h1>
+<p>Savāc desmit lapas.</p>
+<section class="noteikumi">
+  <h2>Noteikumi</h2>
+  <p> Uzspiežot pogu sāc speli.Ķer lapas un par katru lapu iegūsti punktu.</p>
+  <p> Skaņas signals skanes katru reizi, kad noķersi lapu.</p>
+</section>
+<div class="laukums">
+  <h2>Spēles laukums</h2>
+  <img src="atteli/varonis2.png" alt="Groziņš" width="128">
+  <p>Kad noķersi lapu dzirdēsi šo skaņu:</p>
+  <audio controls src="skanas/klikskis.wav"></audio>
+  <p id="punkti">Punkti: 0</p>
+  <button onclick="savakt()">Savākt punktu</button>
+</div>
+<script>
+// Gatava punktu poga — šo skriptu nemaini.
+let punkti = 0;
+function savakt() {
+  punkti = punkti + 1;
+  document.getElementById("punkti").textContent = "Punkti: " + punkti;
+}
+</script>
+</body>
+</html>
